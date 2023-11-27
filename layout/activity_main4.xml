@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="20dp"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profilePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/profilePic"
+
+
+            />
+        <TextView
+            android:id="@+id/Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userName"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/profilePic"
+
+            android:text="Gender"
+            />
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/profilePic"
+
+            android:text="Phone Number"
+            android:layout_below="@id/Gender"
+            />
+        <TextView
+            android:id="@+id/Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneNumber"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/profilePic"
+
+            android:text="Email"
+            />
+        <TextView
+            android:id="@+id/Bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Email"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/profilePic"
+
+            android:text="Short Bio"
+            />
+        <TextView
+            android:id="@+id/skillsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/profilePic"
+
+            android:layout_below="@id/Bio"
+            android:text="Skills" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/skillsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/skillsLabel"
+        />
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+<Button
+    android:id="@+id/sendEmailBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_below="@+id/card"
+    android:text="Send Email"
+    android:layout_marginLeft="65dp"
+    />
+    <Button
+        android:id="@+id/makeCallBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/card"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/sendEmailBtn"
+        android:text="Make a Call"
+        android:layout_marginLeft="15dp"
+        />
+
+
+
+
+</RelativeLayout>
